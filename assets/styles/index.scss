@@ -1,1 +1,21 @@
 @import '~bootstrap/scss/bootstrap';
+
+.success {
+  color: green;
+}
+
+.failure {
+  color: red;
+}
+
+
+.game {
+  border: 1px solid black;
+  color: 000000;
+  height: 100px;
+  width: 80px;
+  display: flex;
+  font-size: 45pt;
+  text-align: center;
+  font-weight: bold;
+}

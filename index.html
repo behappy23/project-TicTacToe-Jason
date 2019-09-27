@@ -15,10 +15,12 @@
 
 <body>
   <h1>TicTacToe</h1>
+  <h2 id="message"></h2>
   <h2>Sign-Up</h2>
   <form id="sign-up">
     <input type="email" name="credentials[email]" placeholder='Enter email...'>
     <input type="password" name="credentials[password]" placeholder="Enter password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="Enter password again">
     <input type="submit" value="submit">
   </form>
   <h2>Sign-in</h2>
@@ -35,6 +37,38 @@
     <input type="password" name="passwords[new]">
     <input type="submit" value="submit">
   </form>
+  <h2>Sign-out</h2>
+  <form id='sign-out'>
+  <input type="submit" value="sign-out">
+  </form>
+
+  <div class="container">
+          <div class="row">
+            <div id="0" class="col-4 game">x</div>
+            <div id="1" class="col-4 game">o</div>
+            <div id="2" class="col-4 game">x</div>
+            <div id="3" class="col-4 game">o</div>
+            <div id="4" class="col-4 game">x</div>
+            <div id="5" class="col-4 game">o</div>
+            <div id="6" class="col-4 game">x</div>
+            <div id="7" class="col-4 game">o</div>
+            <div id="8" class="col-4 game">x</div>
+          </div>
+        </div>
+
+        <!-- <div class="container">
+          <div class="row">
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+            <div class="col-sm">
+              One of three columns
+            </div>
+          </div>
+        </div> -->
 
 </body>
 
