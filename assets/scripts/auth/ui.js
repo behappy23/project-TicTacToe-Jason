@@ -47,7 +47,12 @@ const onChangePasswordFailure = function () {
   failureMessage('Change Password failed')
   console.log('Password Changed Failed')
 }
-
+const onNewGameSuccess = function () {
+  successMessage('New game')
+  console.log('New Game Success')
+  $('.game').text('')
+  // this code resets the game board with "new-game" button
+}
 module.exports = {
   onSignUpSuccess,
   onSignUpFailure,
@@ -56,5 +61,6 @@ module.exports = {
   onChangePasswordFailure,
   onChangePasswordSuccess,
   onSignOutSuccess,
-  onSignOutFailure
+  onSignOutFailure,
+  onNewGameSuccess
 }

@@ -13,6 +13,9 @@ $(() => {
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#change-password').on('submit', authEvents.onChangePassword)
   $('#sign-out').on('submit', authEvents.onSignOut)
+  $('.game').on('click', authEvents.onClick)
+  $('#new-game').on('submit', authEvents.onNewGame)
+
   // ('#create-example') selects the create-example form on the page
   // the rest says: I want to listen for the submit event
   // nd then call exampleEvents.onCreateExample whenever the form is submitted

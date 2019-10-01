@@ -14,8 +14,12 @@
   color: 000000;
   height: 100px;
   width: 80px;
-  display: flex;
+  // height: calc(100 / 3);
+  // display: flex;
   font-size: 45pt;
   text-align: center;
   font-weight: bold;
+  background-color: lightblue;
+  cursor: pointer;
+
 }
