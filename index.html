@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Do not add `link` tags-->
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Do not add `script` tags-->
+  <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+  <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+</head>
+
+<body>
+  <h1>TicTacToe</h1>
+  <h2 id="message"></h2>
+  <h2>Sign-Up</h2>
+  <form id="sign-up">
+    <input type="email" name="credentials[email]" placeholder='Enter email...'>
+    <input type="password" name="credentials[password]" placeholder="Enter password">
+    <input type="password" name="credentials[password_confirmation]" placeholder="Enter password again">
+    <input type="submit" value="submit">
+  </form>
+  <h2>Sign-in</h2>
+  <form id="sign-in">
+    <input type="email" name="credentials[email]" placeholder='Enter email...'>
+    <input type="password" name="credentials[password]" placeholder="Enter password">
+    <input type="submit" value="submit">
+  </form>
+
+  <h2>Change Password</h2>
+
+  <form id="change-password">
+    <input type="password" name="passwords[old]" placeholder="Enter old password">
+    <input type="password" name="passwords[new]">
+    <input type="submit" value="submit">
+  </form>
+  <h2>Sign-out</h2>
+  <form id='sign-out'>
+  <input type="submit" value="sign-out">
+  </form>
+
+
+  <div class="container">
+          <div class="row gameboard">
+            <div id="0" class="col-4 game"></div>
+            <div id="1" class="col-4 game"></div>
+            <div id="2" class="col-4 game"></div>
+            <div id="3" class="col-4 game"></div>
+            <div id="4" class="col-4 game"></div>
+            <div id="5" class="col-4 game"></div>
+            <div id="6" class="col-4 game"></div>
+            <div id="7" class="col-4 game"></div>
+            <div id="8" class="col-4 game"></div>
+          </div>
+        </div>
+        <!-- <h2>New game</h2> -->
+        <form id='new-game'>
+        <input type="submit" value="new-game">
+        </form>
+</body>
+
+</html>
