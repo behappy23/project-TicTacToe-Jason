@@ -1,10 +1,11 @@
 'use strict'
-
+//
 const config = require('../config')
-
-// require `store` so we have access to our `token`
-// so the API knows who we are
+//
+// // require `store` so we have access to our `token`
+// // so the API knows who we are
 const store = require('../store')
+//
 
 const signUp = function (formData) {
   return $.ajax({
@@ -49,7 +50,50 @@ const newGame = function (formData) {
     headers: {
       Authorization: 'Token token=' + store.user.token
     },
+    data: '{}'
+  })
+}
+const update = function (index, value) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + `/games/${store.game.id}`,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'cell': {
+          'index': index,
+          'value': '' + value
+        },
+        'over': false
+      }
+    }
+  })
+}
+
+const updateGame = function (board, player) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/games/' + player,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
     data: {}
+  })
+}
+const updateGameOver = function (over, player) {
+  return $.ajax({
+    method: 'PATCH',
+    url: config.apiUrl + '/games/' + player,
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data: {
+      'game': {
+        'over': over
+      }
+    }
   })
 }
 
@@ -58,5 +102,6 @@ module.exports = {
   signIn,
   changePassword,
   signOut,
-  newGame
+  newGame,
+  updateGameOver
 }
