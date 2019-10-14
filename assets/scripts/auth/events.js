@@ -3,6 +3,8 @@
 const getFormFields = require('../../../lib/get-form-fields')
 const api = require('./api')
 const ui = require('./ui')
+const store = require('../store')
+
 //
 
 let player = 'x'
@@ -84,6 +86,49 @@ const onClick = function (event) {
   }
 }
 
+// // store.game = responseData.game
+// const checkWin = function () {
+//   // player += 1
+//   if (store.gameBoard[0] !== '' && store.gameBoard[0] === store.gameBoard[1] && store.gameBoard[1] === store.gameBoard[2]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[3] !== '' && store.gameBoard[3] === store.gameBoard[4] && store.gameBoard[4] === store.gameBoard[5]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[6] !== '' && store.gameBoard[6] === store.gameBoard[7] && store.gameBoard[7] === store.gameBoard[8]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[0] !== '' && store.gameBoard[0] === store.gameBoard[3] && store.gameBoard[3] === store.gameBoard[6]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[1] !== '' && store.gameBoard[1] === store.gameBoard[4] && store.gameBoard[4] === store.gameBoard[7]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[2] !== '' && store.gameBoard[2] === store.gameBoard[5] && store.gameBoard[5] === store.gameBoard[8]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[2] !== '' && store.gameBoard[2] === store.gameBoard[4] && store.gameBoard[4] === store.gameBoard[6]) {
+//     gameOver = true
+//     endGame()
+//   } else if (store.gameBoard[0] !== '' && store.gameBoard[0] === store.gameBoard[4] && store.gameBoard[4] === store.gameBoard[8]) {
+//     gameOver = true
+//     endGame()
+//   } else if (turns === 9) {
+//     endGame()
+//   }
+// }
+// // checkWin()
+//
+// const endGame = function () {
+// if (gameOver === false) {
+//   // successMessage('The game is a draw!')
+// } else if (turns % 2 === 1) {
+//   // successMessage('Player X wins!')
+// } else if (turns % 2 === 0) {
+//   // successMessage('Player O wins!')
+// }
+// store.gameBoard = true
+// }
 
 function checkWin () {
   // if top row is a winning combo
